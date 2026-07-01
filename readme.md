@@ -61,6 +61,14 @@ export ANTHROPIC_API_KEY=...              # for gradient-cell judging (cells 4,5
 python beyond_binary_bob.py --adapter ./soo_mistral_lora --compare
 ```
 
+## Environment variables
+
+Copy `.env.example` to `.env` (or export directly) and fill in:
+
+| Variable | Required for | Notes |
+|----------|---------------|-------|
+| `ANTHROPIC_API_KEY` | `beyond_binary_bob.py` cells 4/5 | Used as the LLM judge for the gradient-scored honesty cells (Portrait, Delivery). Not needed for `soo_finetune.py` or the binary cells (1–3). |
+
 ## Reading the results
 
 The decisive quantity is the **delta**, baseline → SOO-FT:
